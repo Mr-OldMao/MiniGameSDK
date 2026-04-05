@@ -50,7 +50,8 @@ sysinfo.txt
 /_Build
 # /Assets/Plugins
 
-/Assets/SDK
+# 各平台SDK包
+#/Assets/SDK
 
 # 抖音
 /Assets/Editor/StarkBuilderSetting.asset

@@ -1,0 +1,18 @@
+{
+    "name": "AlipayAssetBundle",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6fdf7585b51b346e69aea111b555801c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "SDK_ZFB"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
