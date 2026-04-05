@@ -6,15 +6,12 @@ namespace MiniGameSDK
     {
         // 初始化相关方法
         void InitSDK(Action<bool> callback = null); // 初始化SDK
-        void Login(Action<bool> callback);
-        bool IsReady(); // 检查SDK是否已准备就绪
         string GetPlatformName(); // 获取平台名称
 
         // 登录相关方法
-        void Login(Action<string> onSuccess, Action<string> onFail); // 用户登录
+        bool IsLoggedIn { get; } // 检查用户是否已登录
+        void Login(Action<bool> callback); // 用户登录
         void GetUserInfo(Action<UserInfo> onSuccess, Action<string> onFail); // 获取用户信息
-        bool IsLoggedIn(); // 检查用户是否已登录
-
         // 广告相关方法
         void ShowAdvReward(Action<bool> onClose, Action<string> onError = null); // 显示激励广告
         void ShowAdvInsert(Action onClose = null, Action<string> onError = null); // 显示插屏广告

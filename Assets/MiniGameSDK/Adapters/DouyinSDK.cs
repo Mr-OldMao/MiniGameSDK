@@ -47,37 +47,25 @@ namespace MiniGameSDK
             });
         }
 
+        public string GetPlatformName() => "Douyin";
+
+        #region 登录
+        public bool IsLoggedIn { get; private set; } = false;
+
         public void Login(Action<bool> callback)
         {
             TT.Login((string code, string anonymousCode, bool isLogin) =>
             {
                 Debug.Log($"[DouyinSDK] Login: {code} {anonymousCode} {isLogin}");
+                IsLoggedIn = true;
                 callback?.Invoke(true);
             }, (string errMsg) =>
             {
                 Debug.LogError($"[DouyinSDK] Login Error: {errMsg}");
+                IsLoggedIn = false;
                 callback?.Invoke(false);
             }, true);
         }
-
-        public bool IsReady() => true;
-        public string GetPlatformName() => "Douyin";
-
-        #region 登录
-        public void Login(Action<string> onSuccess, Action<string> onFail)
-        {
-            TT.Login((string code, string anonymousCode, bool isLogin) =>
-            {
-                Debug.Log($"[DouyinSDK] Login: {code} {anonymousCode} {isLogin}");
-                onSuccess?.Invoke(code);
-            }, (string errMsg) =>
-            {
-                Debug.LogError($"[DouyinSDK] Login Error: {errMsg}");
-                onFail?.Invoke(errMsg);
-            });
-        }
-
-        public bool IsLoggedIn() => true;
 
         public void GetUserInfo(Action<UserInfo> onSuccess, Action<string> onFail)
         {

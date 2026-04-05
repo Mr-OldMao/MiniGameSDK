@@ -737,7 +737,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Standalone: 
-    WebGL: SDK_DY
+    WebGL: SDK_WX
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

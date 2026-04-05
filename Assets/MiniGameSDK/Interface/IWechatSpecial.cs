@@ -2,6 +2,7 @@
 {
     public interface IWechatSpecial
     {
-        void ShowGameClub();
+        //隐私协议弹窗
+        void PrivacyAuthorizeResolve();
     }
 }

@@ -7,5 +7,7 @@
         public string avatarUrl;
         public string openId;
         public string userId;
+
+        public object userData;
     }
 }
