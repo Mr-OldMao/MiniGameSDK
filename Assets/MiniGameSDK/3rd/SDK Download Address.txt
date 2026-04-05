@@ -14,3 +14,8 @@ https://miniapp.bilibili.com/small-game-doc/engine/unity/
 https://mdn.alipayobjects.com/paladin_unity/uri/file/as/AlipaySDKPackage
 https://opendocs.alipay.com/mini-game/0ftnrr?pathHash=2185697d
 https://developer.unity.cn/projects/68cbb42dedbc2a4014934fa8
+
+
+UnitySDK API文档
+微信小游戏
+https://developers.weixin.qq.com/minigame/dev/guide/game-engine/unity-webgl-transform/Design/WX_SDK.html
