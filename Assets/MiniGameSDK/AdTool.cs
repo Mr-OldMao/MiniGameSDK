@@ -17,18 +17,18 @@ namespace MiniGameSDK
             return Time.realtimeSinceStartup - _lastRewardTime > COOLDOWN;
         }
 
-        public static void ShowRewardAd(Action onReward, Action onClose, Action<string> onError)
+        public static void ShowAdvReward(Action<bool> onClose, Action<string> onError)
         {
             if (!CanShowReward()) return;
             _lastRewardTime = Time.realtimeSinceStartup;
 
-            SDKManager.API.ShowRewardAd(onReward, onClose, err =>
+            SDKManager.Instance.ShowAdvReward(onClose, err =>
             {
                 // 简单自动重试一次
                 Debug.LogWarning($"广告失败：{err}，1秒后重试");
                 Scheduler.Instance.Delay(1f, () =>
                 {
-                    SDKManager.API.ShowRewardAd(onReward, onClose, onError);
+                    SDKManager.Instance.ShowAdvReward(onClose, onError);
                 });
             });
         }

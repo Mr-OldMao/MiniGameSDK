@@ -1,36 +1,40 @@
+using System;
 using UnityEngine;
 
 namespace MiniGameSDK
 {
     public static class SDKManager
     {
-        private static IGameSDK _sdk;
+        private static IGameSDK m_Instance;
 
-        public static IGameSDK API
+        public static IGameSDK Instance
         {
             get
             {
-                if (_sdk == null) Init();
-                return _sdk;
+                if (m_Instance == null)
+                {
+                    Init();
+                }
+                return m_Instance;
             }
         }
 
-        public static void Init()
+        private static void Init()
         {
 #if UNITY_DOUYIN
-            _sdk = new DouyinSDK();
+            m_Instance = new DouyinSDK();
 #elif UNITY_WECHAT
-            _sdk = new WechatSDK();
+            m_Instance = new WechatSDK();
 #elif UNITY_KUAISHOU
-            _sdk = new KuaishouSDK();
+            m_Instance = new KuaishouSDK();
 #elif UNITY_BILIBILI
-            _sdk = new BiliSDK();
+            m_Instance = new BiliSDK();
 #elif UNITY_ALIPAY
-            _sdk = new AlipaySDK();
+            m_Instance = new AlipaySDK();
 #else
-            _sdk = new EditorSDK();
+            m_Instance = new EditorSDK();
 #endif
-            _sdk.Init();
+            //m_Instance.Init();
         }
 
         /// <summary>
@@ -38,7 +42,7 @@ namespace MiniGameSDK
         /// </summary>
         public static T GetSpecial<T>() where T : class
         {
-            return _sdk as T;
+            return m_Instance as T;
         }
     }
 }

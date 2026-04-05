@@ -5,7 +5,10 @@ namespace MiniGameSDK
 {
     public class EditorSDK : IGameSDK
     {
-        public void Init() { }
+        public void InitSDK(Action<bool> callback = null) { }
+
+        public void Login(Action<bool> callback) { }
+
         public bool IsReady() => true;
         public string GetPlatformName() => "Editor";
 
@@ -17,36 +20,9 @@ namespace MiniGameSDK
 
         public bool IsLoggedIn() => true;
 
-        public void ShowRewardAd(Action onReward, Action onClose, Action<string> onError)
-            => onReward?.Invoke();
-
-        public void ShowInterstitialAd(Action onClose, Action<string> onError)
-            => onClose?.Invoke();
-
-        public void ShowBanner(int position = 0) { }
-        public void HideBanner() { }
-
-        public void Share(string title, string imgUrl, Action onSuccess, Action onFail)
-            => onSuccess?.Invoke();
-
-        public void NavigateToMiniGame(string appId, string path) { }
-
-        public void UploadScore(int rankId, int score, Action onSuccess, Action<string> onFail)
-            => onSuccess?.Invoke();
-
-        public void GetRankList(int rankId, Action<RankData[]> onSuccess, Action<string> onFail)
-            => onSuccess?.Invoke(new RankData[0]);
-
-        public void SetStorage(string key, string value, Action onSuccess, Action<string> onFail)
-            => onSuccess?.Invoke();
-
-        public void GetStorage(string key, Action<string> onSuccess, Action<string> onFail)
-            => onSuccess?.Invoke("");
-
-        public void Vibrate(bool isLong = false) { }
-        public void ShowToast(string msg) => Debug.Log($"[Toast]{msg}");
-        public void QuitGame() => Application.Quit();
-        public void OnShow() { }
-        public void OnHide() { }
+        public void ShowAdvReward(Action<bool> onClose, Action<string> onError = null) => onClose?.Invoke(true);
+        public void ShowAdvInsert(Action onClose = null, Action<string> onError = null) => onClose?.Invoke();
+        public void ShowAdvBanner(int position = 0, Action onClose = null, Action<string> onError = null) { }
+        public void HideAdvBanner() { }
     }
 }

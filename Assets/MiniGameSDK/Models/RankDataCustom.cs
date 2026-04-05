@@ -1,7 +1,7 @@
 ﻿namespace MiniGameSDK
 {
     [System.Serializable]
-    public class RankData
+    public class RankDataCustom
     {
         public int rank;
         public string userId;

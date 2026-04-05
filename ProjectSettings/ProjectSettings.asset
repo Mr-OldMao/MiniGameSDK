@@ -736,7 +736,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    WebGL: UNITY_WECHAT
+    WebGL: UNITY_DOUYIN;BYTEGAME_MINIGAME
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

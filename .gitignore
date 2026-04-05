@@ -48,3 +48,4 @@ sysinfo.txt
 *.unitypackage
 
 /_Build
+/Assets/Plugins

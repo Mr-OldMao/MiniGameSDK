@@ -1,0 +1,5 @@
+抖音 TTSDKhttps://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/guide/game-engine/rd-to-SCgame/unity-game-access/install-sdk/
+微信小游戏 Unity 插件https://github.com/wechat-miniprogram/minigame-tuanjie-transform-sdk
+快手小游戏 Unity 插件https://github.com/ksminigame/minigame-tuanjie-transform-sdk
+B 站小游戏 SDKhttps://miniapp.bilibili.com/small-game-doc/engine/unity/
+支付宝小游戏 SDKhttps://opendocs.alipay.com/mini/03mql9
