@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
-using TTSDK;
-using TTSDK.UNBridgeLib.LitJson;
-using static TTSDK.TTRank;
-
 namespace MiniGameSDK
 {
 #if SDK_DY
+
+    using TTSDK;
+    using TTSDK.UNBridgeLib.LitJson;
+    using static TTSDK.TTRank;
     public class DouyinSDK : IGameSDK, IDouyinSpecial
     {
         private TTRewardedVideoAd _rewardAd;
