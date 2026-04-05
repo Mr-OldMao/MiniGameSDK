@@ -21,15 +21,15 @@ namespace MiniGameSDK
 
         private static void Init()
         {
-#if UNITY_DOUYIN
+#if SDK_DY
             m_Instance = new DouyinSDK();
-#elif UNITY_WECHAT
+#elif SDK_WX
             m_Instance = new WechatSDK();
-#elif UNITY_KUAISHOU
+#elif SDK_KS
             m_Instance = new KuaishouSDK();
-#elif UNITY_BILIBILI
+#elif SDK_BL
             m_Instance = new BiliSDK();
-#elif UNITY_ALIPAY
+#elif SDK_ZFB
             m_Instance = new AlipaySDK();
 #else
             m_Instance = new EditorSDK();

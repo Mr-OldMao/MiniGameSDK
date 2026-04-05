@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MiniGameSDK
 {
-#if UNITY_BILIBILI
+#if SDK_BL
     public class BiliSDK : IGameSDK, IBiliSpecial
     {
         public void InitSDK(Action<bool> callback = null) { }

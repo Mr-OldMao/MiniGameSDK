@@ -49,3 +49,9 @@ sysinfo.txt
 
 /_Build
 # /Assets/Plugins
+
+/Assets/SDK
+
+# 抖音
+/Assets/Editor/StarkBuilderSetting.asset
+tt-minigame

@@ -6,7 +6,7 @@ using static TTSDK.TTRank;
 
 namespace MiniGameSDK
 {
-#if UNITY_DOUYIN
+#if SDK_DY
     public class DouyinSDK : IGameSDK, IDouyinSpecial
     {
         private TTRewardedVideoAd _rewardAd;

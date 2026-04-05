@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MiniGameSDK
 {
-#if UNITY_ALIPAY
+#if SDK_ZFB
     public class AlipaySDK : IGameSDK, IAlipaySpecial
     {
         public void InitSDK(Action<bool> callback = null) { }

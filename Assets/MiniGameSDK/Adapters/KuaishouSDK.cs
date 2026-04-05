@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MiniGameSDK
 {
-#if UNITY_KUAISHOU
+#if SDK_KS
     public class KuaishouSDK : IGameSDK, IKuaishouSpecial
     {
         public void InitSDK(Action<bool> callback = null) { }

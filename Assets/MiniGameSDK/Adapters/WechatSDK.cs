@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MiniGameSDK
 {
-#if UNITY_WECHAT
+#if SDK_WX
     public class WechatSDK : IGameSDK, IWechatSpecial
     {
         public void InitSDK(Action<bool> callback = null) { }

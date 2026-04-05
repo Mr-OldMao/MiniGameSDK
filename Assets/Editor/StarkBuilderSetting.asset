@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StarkBuilderSetting
   m_EditorClassIdentifier: 
   tag: 0
-  wasmResourceUrl: 
+  wasmResourceUrl: http://
   OutputDir: E:\UnityProject\MiniGameSDK\tt-minigame
   useByteAudioAPI: 0
   wasmMemorySize: 128
@@ -44,14 +44,14 @@ MonoBehaviour:
   appHost: 2
   compressMethod: 1
   runtimeEnv: 0
-  framework: 0
+  framework: 1
   architecture: 2
   miniApkVersion: 0
   scriptingBackend: 0
   NativeWhiteListRegex:
   - com.bytedance.starksdk
   - _Backup~
-  _appId: 
+  _appId: tt4fb7390ad1d5287c07
   version: 
   autoVersion: 0
   _webglPackagePath: 
@@ -60,6 +60,6 @@ MonoBehaviour:
   _menuButtonStyle: 0
   _publishType: 0
   publishDesc: 
-  idePath: 
+  idePath: "D:/DyTools/@bytedminiprogram-ide/\u6296\u97F3\u5F00\u53D1\u8005\u5DE5\u5177.exe"
   isConvert: 0
   isOldBuildFormat: 1
